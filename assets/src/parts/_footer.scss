@@ -1,0 +1,8 @@
+.footer {
+	padding-top: rem(118); 
+	@include bg('../img/bg.jpg'); 
+	&__title {
+		padding-bottom: rem(137); 
+		@include title($white1);
+	}
+}

@@ -1,0 +1,38 @@
+.services {
+	padding-top: rem(116); 
+	padding-bottom: rem(119); 
+	&__title {
+		padding-bottom: rem(137); 
+		@include title($dark-text);
+	}
+	&__box {
+		@extend .flex-row;
+		@include justify-content(space-between);
+	}
+	&__item {
+		// border: 1px solid green; 
+		@extend .flex-col;
+		@include basis(calc((100% - 150px)/3));
+		@include align-items(center);
+		@include justify-content(space-between);
+	}
+	&__info {
+		text-align: center;
+		font-family: 'Lato', sans-serif;
+		color: $dark-text;
+		font-weight: 400;
+	}
+	&__img {
+		padding-bottom: rem(37); 
+	}
+	&__name {
+		padding-bottom: rem(36); 
+		font-size: rem(24);
+		line-height: rem(24);
+	}
+	&__text {
+		font-size: rem(16);
+		line-height: rem(30);
+	}
+
+}

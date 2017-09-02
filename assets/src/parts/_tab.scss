@@ -1,0 +1,48 @@
+.tab {
+	padding-top: rem(173); 
+	// padding-bottom: rem(115); 
+	@include bg('../img/about.jpg'); 
+	&__info {
+		@include basis(calc(50% - 15px));
+		color: $white1;
+		font-family: 'Lato', sans-serif;
+	}
+	&__title {
+		font-size: rem(45);
+		font-weight: 400;
+		line-height: rem(90);
+		text-transform: uppercase;
+	}
+	&__text {
+		padding-bottom: rem(70); 
+		font-size: rem(22);
+		font-weight: 100;
+		line-height: rem(28);
+		&--hidden {
+			display: none;
+		}
+	}
+	&__lable {
+		font-size: rem(18);
+		font-weight: 400;
+		line-height: rem(28);
+		text-decoration: underline;
+		&:hover {
+			cursor: pointer;
+			opacity: .2;
+			@include transition(all .3 ease);   
+			text-decoration: none;
+		}
+	}
+	&__btn {
+		display: none;
+		&:checked + .tab__text--hidden {
+			display: block;
+		}
+	}
+	&__img {
+		@extend .flex-row;
+		@include justify-content(center);
+		@include basis(calc(50% - 15px));
+	}
+}
