@@ -1,8 +1,101 @@
 .footer {
 	padding-top: rem(118); 
+	padding-bottom: rem(122); 
 	@include bg('../img/bg.jpg'); 
+	&__flex-col {
+		@include align-items(center);
+	}
 	&__title {
-		padding-bottom: rem(137); 
+		padding-bottom: rem(133); 
 		@include title($white1);
 	}
+	&__social {
+		padding-bottom: rem(60); 
+		@extend .flex-row;
+		@include justify-content(center);
+	}
+	&__link {
+		padding: 0 rem(16); 
+		color: $white1;
+		font-size: rem(24); 
+		&:hover {
+			color: $blue;
+			opacity: .6; 
+			@include transition(all .3 ease);   
+		}
+	}
+	&__btn	{
+		@include btn($white1, $white1);
+		@include align-self(center);
+	} 
+}
+.form {
+	padding-bottom: rem(50); 
+	@extend .flex-row;
+	@include justify-content(space-between);
+	width: 60%;
+	&__label {
+		display: none;
+	}
+	&__input {
+		@include basis(calc(50% - 31px));
+		margin-bottom: rem(60); 
+		padding-left: rem(30);
+		height: rem(66); 
+		color: $gray;
+		background: transparent;
+		border: none;
+		border-bottom: 2px solid $white2;  
+		&::-webkit-input-placeholder {
+			font-family: 'Lato', sans-serif;
+			font-size: rem(18);
+			font-weight: 400;
+			font-style: italic;
+			line-height: rem(66);
+		}
+		&:hover{
+			cursor: pointer;
+			opacity: .2;
+			background-color: lighten($white2, 20%);
+			border: 2px solid $white2; 
+			@include transition(all .3s ease-in-out);
+			}
+		&:focus, &:active {
+			outline: none; 
+		}
+	}
+	&__message {
+		@include basis(100%);
+		height: rem(80); 
+		padding: rem(30);   
+		resize: none; 
+		border: none;
+		border-bottom: 2px solid $white2; 
+		background-color: transparent;
+		// opacity: 0.5; 
+		@include transition(all .3s ease-in-out);
+		&::-webkit-input-placeholder {
+			color: $gray;
+			font-family: 'Lato', sans-serif;
+			font-size: rem(18);
+			font-weight: 400;
+			font-style: italic;
+			line-height: rem(20);
+		}
+		&:hover {
+			cursor: pointer;
+			opacity: .2;
+			background-color: lighten($white2, 20%);
+			border: 2px solid $white2; 
+			@include transition(all .3s ease-in-out);
+		}
+		&:focus, &:active {
+			opacity: .2;
+			background-color: lighten($white2, 20%);
+			border: 2px solid $white2; 
+			@include transition(all .3s ease-in-out);
+			outline: none; 
+		}
+	}
+
 }
