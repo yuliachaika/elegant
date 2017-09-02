@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Elegant</title>
 	<link rel="shortcut icon" href="assets/img/fav.png">
+	<link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css"> 
 	<link rel="stylesheet" type="text/css" href="assets/dist/style.css">
 	
 </head>
@@ -18,19 +19,19 @@
 				</div>
 				<ul class="hero__menu">
 					<li class="hero__item">
-						<a class="hero__link">HELLO</a>
+						<a class="hero__link" href="#">HELLO</a>
 					</li>
 					<li class="hero__item">
-						<a class="hero__link">SERVICES</a>
+						<a class="hero__link" href="#services">SERVICES</a>
 					</li>
 					<li class="hero__item">
-						<a class="hero__link">ABOUTUS</a>
+						<a class="hero__link" href="#tab">ABOUTUS</a>
 					</li>
 					<li class="hero__item">
-						<a class="hero__link">OUR WORK</a>
+						<a class="hero__link" href="#work">OUR WORK</a>
 					</li>
 					<li class="hero__item">
-						<a class="hero__link">CONTACT US</a>
+						<a class="hero__link" href="#contact">CONTACT US</a>
 					</li>                                       
 				</ul>
 			</div>
@@ -76,7 +77,7 @@
 		<!-- .container -->
 	</section>
 	<!-- .services -->
-	<section class="tab">
+	<section class="tab" id="tab">
 		<div class="container flex-row tab__flex-row">
 			<div class="tab__info">
 				<h1 class="tab__title">dolore magna aliqua</h1>
@@ -91,7 +92,7 @@
 		<!-- .container -->
 	</section>
 	<!-- .tab -->
-	<section class="work">
+	<section class="work" id="work">
 		<div class="container flex-col work__flex-col">
 			<h2 class="work__title">our work</h2>
 			<div class="work__box box">
@@ -118,8 +119,8 @@
 		<!-- .container -->
 	</section>
 	<!-- .work -->
-	<footer class="footer">
-		<div class="container">
+	<footer class="footer" id="contact">
+		<div class="container flex-col footer__flex-col">
 			<h2 class="footer__title">get in touch</h2>
 			
 			<ul class="footer__social">
@@ -150,9 +151,14 @@
 				</li>
 			</ul>
 			<!-- .footer__social -->
-			<form class="footer__form">
-				
+			<form class="footer__form form">
+				<label class="form__label" for="name"></label>
+				<input class="form__input" type="text" name="name" id="name" placeholder="Name">
+				<label class="form__label" for="name"></label>
+				<input class="form__input" type="email" name="email" id="email" placeholder="Email">
+				<textarea class="form__message" name="message" placeholder="Message"></textarea>
 			</form>
+			<a class="footer__btn btn" href="#">Send</a>
 		</div>
 		<!-- .container -->
 	</footer>
