@@ -81,7 +81,7 @@ a {
 
 .hero {
   width: 100%;
-  padding: 3.125rem 4.375rem 2.875rem 0;
+  padding: 3.125rem 0 2.875rem 0;
   background-image: url("../img/hero.jpg");
   background-repeat: no-repeat;
   background-size: cover; }
@@ -89,6 +89,7 @@ a {
     -webkit-align-items: center;
     align-items: center; }
   .hero__nav {
+    padding-right: 4.375rem;
     width: 100%;
     -webkit-justify-content: space-between;
     justify-content: space-between; }
